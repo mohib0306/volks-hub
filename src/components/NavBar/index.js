@@ -1,32 +1,19 @@
 import React, { Component } from 'react';
-import { Header, Segment } from 'semantic-ui-react';
-
+import { Grid, Button } from 'semantic-ui-react';
+import './styles.scss';
 export default class NavBar extends Component {
   render() {
     const { children } = this.props;
     return (
-      <Segment
-        style={{
-          background: 'white',
-          borderRadius: '0px',
-          borderStyle: 'none',
-          boxShadow: 'none',
-          margin: '20px',
-        }}
-        text
-      >
-        <Header
-          style={{
-            fontSize: '45px',
-            fontWeight: 'normal',
-            color: 'red',
-          }}
-          as="h1"
-          inverted
-        >
+      <Grid className="navBar">
+        <Grid.Column className="logo" floated="left" width={5}>
           {children}
-        </Header>
-      </Segment>
+        </Grid.Column>
+        <Grid.Column floated="right" width={5}>
+          <Button circular primary icon="lock" content="Login" />
+          <Button circular positive icon="user outline" content="SignUp" />
+        </Grid.Column>
+      </Grid>
     );
   }
 }

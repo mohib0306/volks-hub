@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
-import { Header, Segment } from 'semantic-ui-react';
-
+import { Grid } from 'semantic-ui-react';
+import './style.scss';
 class LargeSection extends Component {
   render() {
-    const { children } = this.props;
+    const { background, children } = this.props;
     return (
-      <Segment
+      <Grid
+        centered
+        className="largeSection"
         style={{
-          fontSize: '2em',
-          fontWeight: 'normal',
-          background: 'black',
-          borderRadius: '0px',
-          border: 'none',
+          background: background,
         }}
-        text
       >
-        <Header as="h2" inverted>
-          {children}
-        </Header>
-      </Segment>
+        <Grid.Row verticalAlign="middle">{children}</Grid.Row>
+      </Grid>
     );
   }
 }
