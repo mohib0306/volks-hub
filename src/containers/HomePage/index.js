@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Header, Icon } from 'semantic-ui-react';
 import LargeSection from '../../components/LargeSection';
 import NavBar from '../../components/NavBar';
+import Footer from '../../components/Footer';
 import SearchInput from '../../components/SearchInput';
 
 class HomePage extends Component {
@@ -19,14 +20,33 @@ class HomePage extends Component {
             <SearchInput action="Search" size="huge" placeholder="Search..." />
           </Grid.Column>
         </LargeSection>
-        <LargeSection>
-          <Grid.Column>
-            <h2>Why?</h2>
-          </Grid.Column>
-          <Grid.Column>
-            <h2>How?</h2>
+        <LargeSection height="250px">
+          <Grid.Column
+            style={{
+              textAlign: 'center',
+            }}
+          >
+            <Header as="h2" icon textAlign="center">
+              <Icon name="users" circular />
+              <Header.Content>Why?</Header.Content>
+            </Header>
+            <p>Why is it needed?</p>
           </Grid.Column>
         </LargeSection>
+        <LargeSection height="250px">
+          <Grid.Column
+            style={{
+              textAlign: 'center',
+            }}
+          >
+            <Header as="h2" icon textAlign="center">
+              <Icon name="search" circular />
+              <Header.Content>How?</Header.Content>
+            </Header>
+            <p>How is it done?</p>
+          </Grid.Column>
+        </LargeSection>
+        <Footer />
       </div>
     );
   }

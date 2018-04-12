@@ -10,8 +10,8 @@ export default class NavBar extends Component {
           {children}
         </Grid.Column>
         <Grid.Column floated="right" width={5}>
-          <Button circular primary icon="lock" content="Login" />
-          <Button circular positive icon="user outline" content="SignUp" />
+          <Button circular primary icon="lock" content="Sign in" />
+          <Button circular positive icon="user outline" content="Sign up" />
         </Grid.Column>
       </Grid>
     );
